@@ -7,3 +7,14 @@ c:\users\chris\documents\visual studio 2010\Projects\C#\Pharmacy Records\Pharmac
 c:\users\chris\documents\visual studio 2010\Projects\C#\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.pdb
 c:\users\chris\documents\visual studio 2010\Projects\C#\Pharmacy Records\Pharmacy Records\bin\Debug\Pharmacy Records.exe.config
 c:\users\chris\documents\visual studio 2010\Projects\C#\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.Form1.resources
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\bin\Debug\Pharmacy Records.exe.config
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.exe
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.pdb
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\bin\Debug\Pharmacy Records.exe
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\bin\Debug\Pharmacy Records.pdb
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.csprojResolveAssemblyReference.cache
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.Form1.resources
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.login.resources
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.Properties.Resources.resources
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.csproj.GenerateResource.Cache
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\bin\Debug\MySql.Data.dll
