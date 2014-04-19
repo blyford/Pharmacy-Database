@@ -32,13 +32,13 @@ namespace Pharmacy_Records
             
             if (Passwordtxt.Text == Passcode && Usernametxt.Text == User)
             {
-                MessageBox.Show("Good job soldier", "Mission Successful");
-                new Form1().Show();
+                MessageBox.Show("Login Credentials Authenticated.  Welcome " + User + "!", "Login Successful");
+                new TableChoose().Show();
                 Hide();
             }
             else
             {
-                MessageBox.Show("Incorrect combination of Username or Password,\n\tplease try again, you fool.",
+                MessageBox.Show("Incorrect combination of Username or Password,\n\tplease try again.",
                 "Incorrect Login");
                 Usernametxt.Text = null;
                 Passwordtxt.Text = null;

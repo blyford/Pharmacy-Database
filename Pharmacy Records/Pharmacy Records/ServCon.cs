@@ -72,7 +72,7 @@ namespace Pharmacy_Records
             }
         }
 
-        public void execute(string query)
+        public void modify(string query)
         {
             if (this.OpenConnection() == true)
             {
@@ -82,6 +82,28 @@ namespace Pharmacy_Records
 
                 this.CloseConnection();
             }
+        }
+
+        public string[] query(string query)
+        {
+            string[] result = new string[9999999];
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    int i = 0;
+                    while (reader.Read())
+                    {
+                        result[i] = "First Name: " + reader.GetString(1) + " Last Name: " + reader.GetString(2);
+                        i++;
+                    }
+                }
+
+                this.CloseConnection();
+            }
+            return result;
         }
     }
 }

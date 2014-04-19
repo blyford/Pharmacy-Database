@@ -13,8 +13,9 @@ C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy
 C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\bin\Debug\Pharmacy Records.exe
 C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\bin\Debug\Pharmacy Records.pdb
 C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.csprojResolveAssemblyReference.cache
-C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.Form1.resources
 C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.login.resources
 C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.Properties.Resources.resources
 C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.csproj.GenerateResource.Cache
 C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\bin\Debug\MySql.Data.dll
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.TableChoose.resources
+C:\Users\blyford\Documents\Visual Studio 2012\Projects\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.Information.resources
