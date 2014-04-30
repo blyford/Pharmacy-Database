@@ -31,14 +31,8 @@ namespace Pharmacy_Records
 
         private void button2_Click(object sender, EventArgs e)
         {
-            ServCon mnginput;
-            mnginput = new ServCon();
-            string managerID = mngID.Text;
-            string mngfname = fnamebox.Text;
-            string mnglname = lnamebox.Text;
-
-            string SQLcommand = "insert into login values(" + managerID + ",'" + mngfname + "','" + mnglname + "')";
-            mnginput.modify(SQLcommand);
+            new NewUser().Show();
+            this.Close();
         }
 
         private void Update_Click(object sender, EventArgs e)

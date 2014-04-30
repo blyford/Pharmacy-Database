@@ -48,6 +48,7 @@ namespace Pharmacy_Records
             if (comboBox1.SelectedItem == "Managment Information")
             {
                 new Information().Show();
+                this.Close();
             }
             else if (comboBox1.SelectedItem == "Administration Data")
             {
@@ -84,7 +85,8 @@ namespace Pharmacy_Records
 
         private void logoutbutton_Click(object sender, EventArgs e)
         {
-            Application.Restart();
+            new login().Show();
+            this.Close();
         }
 
     }

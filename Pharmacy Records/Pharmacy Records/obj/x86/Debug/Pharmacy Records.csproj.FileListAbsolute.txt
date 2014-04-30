@@ -30,3 +30,5 @@ C:\Users\Chris\Documents\GitHub\Pharmacy-Database\Pharmacy Records\Pharmacy Reco
 C:\Users\Chris\Documents\GitHub\Pharmacy-Database\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.csproj.GenerateResource.Cache
 C:\Users\Chris\Documents\GitHub\Pharmacy-Database\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.exe
 C:\Users\Chris\Documents\GitHub\Pharmacy-Database\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.pdb
+C:\Users\Chris\Documents\GitHub\Pharmacy-Database\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy Records.csprojResolveAssemblyReference.cache
+C:\Users\Chris\Documents\GitHub\Pharmacy-Database\Pharmacy Records\Pharmacy Records\obj\x86\Debug\Pharmacy_Records.NewUser.resources
