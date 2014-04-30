@@ -46,6 +46,7 @@
             this.Enter.TabIndex = 0;
             this.Enter.Text = "Save";
             this.Enter.UseVisualStyleBackColor = true;
+            this.Enter.Click += new System.EventHandler(this.Enter_Click);
             // 
             // Back
             // 

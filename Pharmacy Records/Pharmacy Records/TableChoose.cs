@@ -48,7 +48,6 @@ namespace Pharmacy_Records
             if (comboBox1.SelectedItem == "Managment Information")
             {
                 new Information().Show();
-                this.Close();
             }
             else if (comboBox1.SelectedItem == "Administration Data")
             {
@@ -79,7 +78,7 @@ namespace Pharmacy_Records
                 MessageBox.Show("You must select a table from the list!", "Database Error");
                 new Information().Show();
             }
-
+            this.Close();
 
         }
 
