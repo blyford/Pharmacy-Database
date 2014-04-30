@@ -102,11 +102,7 @@ namespace Pharmacy_Records
 
         private void Information_Load(object sender, EventArgs e)
         {
-            if (User.clrnce() == 3)
-            {
-                mngID.Hide();
-                label7.Hide();                    
-            }
+
         }
 
     }

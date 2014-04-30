@@ -61,7 +61,7 @@ namespace Pharmacy_Records
             else if (comboBox1.SelectedItem == "Customer Information")
             {
 
-                new Information().Show();
+                new CustomerData().Show();
             }
             else if (comboBox1.SelectedItem == "Sales Data")
             {

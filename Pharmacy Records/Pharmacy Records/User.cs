@@ -7,7 +7,6 @@ namespace Pharmacy_Records
 {
     static public class User
     {
-        static private int count;
         static private int secure;
         static private string id;
         static public int clrnce()

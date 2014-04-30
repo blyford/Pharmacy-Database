@@ -34,7 +34,7 @@ namespace Pharmacy_Records
                 MessageBox.Show("Login Credentials Authenticated.  Welcome " + user + "!", "Login Successful");
                 User.setdat(access,user);
                 new TableChoose().Show();
-                Hide();
+                this.Hide();
                 
             }
             else
