@@ -27,7 +27,7 @@ namespace Pharmacy_Records
             server = "localhost";
             database = "pharmacy";
             uid = "root";
-            password = "";
+            password = "HoTsHoT2k4";
             string connectionString;
             connectionString = "SERVER=" + server + ";" + "DATABASE=" +
                 database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
@@ -96,6 +96,7 @@ namespace Pharmacy_Records
                     int i = 0;
                     while (reader.Read())
                     {
+                        
                         result[i] = "First Name: " + reader.GetString(1) + " Last Name: " + reader.GetString(2);
                         i++;
                     }
@@ -105,5 +106,26 @@ namespace Pharmacy_Records
             }
             return result;
         }
+
+        public int access(string access)
+        {
+           
+            decimal level = 0;
+            if (this.OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(access,connection);
+
+                using (MySqlDataReader reader = cmd.ExecuteReader())
+                {
+                    while(reader.Read())
+                        level = reader.GetDecimal(0);
+                }
+               
+                this.CloseConnection();
+            }
+            return Convert.ToInt32(level);
+            
+         }
+
     }
 }

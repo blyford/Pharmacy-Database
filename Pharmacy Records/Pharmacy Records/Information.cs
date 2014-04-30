@@ -37,7 +37,7 @@ namespace Pharmacy_Records
             string mngfname = fnamebox.Text;
             string mnglname = lnamebox.Text;
 
-            string SQLcommand = "insert into manager values(" + managerID + ",'" + mngfname + "','" + mnglname + "')";
+            string SQLcommand = "insert into login values(" + managerID + ",'" + mngfname + "','" + mnglname + "')";
             mnginput.modify(SQLcommand);
         }
 
@@ -49,7 +49,7 @@ namespace Pharmacy_Records
             string mngfname = fnamebox.Text;
             string mnglname = lnamebox.Text;
 
-            string SQLcommand = "update manager set firstname = '" + mngfname + "', lastname = '" + mnglname + "' where mngID = " + managerID;
+            string SQLcommand = "update login set username = '" + mngfname + "', lastname = '" + mnglname + "' where mngID = " + managerID;
             mnginput.modify(SQLcommand);
             MessageBox.Show("The Information has been Updated", "Query Successful");
         }
@@ -62,7 +62,7 @@ namespace Pharmacy_Records
             string mngfname = fnamebox.Text;
             string mnglname = lnamebox.Text;
 
-            string SQLcommand = "delete from manager where mngID = " + managerID;
+            string SQLcommand = "delete from login where username = " + managerID;
             mnginput.modify(SQLcommand);
         }
 
@@ -83,7 +83,7 @@ namespace Pharmacy_Records
             mngout = new ServCon();
             if (Fullreport.Checked == true)
             {
-                string command = "select * from manager";
+                string command = "select * from sale";
                 string[] results = mngout.query(command);
                 int i = 0;
                 while(results[i] != null)
@@ -106,6 +106,14 @@ namespace Pharmacy_Records
             }
         }
 
+        private void Information_Load(object sender, EventArgs e)
+        {
+            if (User.clrnce() == 3)
+            {
+                mngID.Hide();
+                label7.Hide();                    
+            }
+        }
 
     }
 }

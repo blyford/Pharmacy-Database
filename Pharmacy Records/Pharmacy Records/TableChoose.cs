@@ -18,12 +18,24 @@ namespace Pharmacy_Records
 
         private void TableChoose_Load(object sender, EventArgs e)
         {
-            comboBox1.Items.Add("Administration Data");
-            comboBox1.Items.Add("Managment Information");
-            comboBox1.Items.Add("Employee Information");
-            comboBox1.Items.Add("Customer Information");
-            comboBox1.Items.Add("Sales Data");
-            comboBox1.Items.Add("Warehouse Data");
+            
+            if(User.clrnce() == 3)
+                comboBox1.Items.Add("Customer Information");
+            else if (User.clrnce() == 2)
+            {
+                comboBox1.Items.Add("Customer Information");
+                comboBox1.Items.Add("Sales Data");
+                comboBox1.Items.Add("Warehouse Data");
+            }
+            else if (User.clrnce() == 1)
+            {
+                comboBox1.Items.Add("Administration Data");
+                comboBox1.Items.Add("Managment Information");
+                comboBox1.Items.Add("Employee Information");
+                comboBox1.Items.Add("Customer Information");
+                comboBox1.Items.Add("Sales Data");
+                comboBox1.Items.Add("Warehouse Data");
+            }
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -39,27 +51,26 @@ namespace Pharmacy_Records
             }
             else if (comboBox1.SelectedItem == "Administration Data")
             {
-                MessageBox.Show("You do not have access to this table.", "Access Denied");
                 new Information().Show();
             }
             else if (comboBox1.SelectedItem == "Employee Information")
             {
-                MessageBox.Show("You do not have access to this table.", "Access Denied");
+
                 new Information().Show();
             }
             else if (comboBox1.SelectedItem == "Customer Information")
             {
-                MessageBox.Show("You do not have access to this table.", "Access Denied");
+
                 new Information().Show();
             }
             else if (comboBox1.SelectedItem == "Sales Data")
             {
-                MessageBox.Show("You do not have access to this table.", "Access Denied");
+
                 new Information().Show();
             }
             else if (comboBox1.SelectedItem == "Warehouse Data")
             {
-                MessageBox.Show("You do not have access to this table.", "Access Denied");
+
                 new Information().Show();
             }
             else

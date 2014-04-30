@@ -200,7 +200,7 @@ namespace Pharmacy_Records
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
-            // Manager
+            // Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -222,8 +222,9 @@ namespace Pharmacy_Records
             this.Controls.Add(this.Save);
             this.Controls.Add(this.logout);
             this.Cursor = System.Windows.Forms.Cursors.Default;
-            this.Name = "Manager";
+            this.Name = "Information";
             this.Text = "Pharmacy Database";
+            this.Load += new System.EventHandler(this.Information_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

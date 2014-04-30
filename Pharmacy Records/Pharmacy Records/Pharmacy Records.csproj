@@ -56,6 +56,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="User.cs" />
     <Compile Include="TableChoose.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -97,7 +98,6 @@
     </EmbeddedResource>
     <None Include="app.config" />
     <None Include="Properties\DataSources\Entities.datasource" />
-    <None Include="Properties\DataSources\Form1.datasource" />
     <None Include="Properties\DataSources\login.datasource" />
     <None Include="Properties\DataSources\Pharmacy_Records.Properties.Resources.datasource" />
     <None Include="Properties\DataSources\Pharmacy_Records.Properties.Settings.datasource" />

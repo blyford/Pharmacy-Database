@@ -12,11 +12,6 @@ namespace Pharmacy_Records
     
     public partial class login : Form
     {
-
-        string User = "Bill Clinton";
-        string Passcode = "Food";
-
-
         public login()
         {
             InitializeComponent();
@@ -29,12 +24,18 @@ namespace Pharmacy_Records
         
         private void loginbtn_Click(object sender, EventArgs e)
         {
-            
-            if (Passwordtxt.Text == Passcode && Usernametxt.Text == User)
+            ServCon entry;
+            entry = new ServCon();
+            string command = "select accessID from login where password = '" + Passwordtxt.Text + "' and username = '" + Usernametxt.Text + "'";
+            string user = Usernametxt.Text;
+            int access = entry.access(command);
+            if (access > 0 && access < 4)
             {
-                MessageBox.Show("Login Credentials Authenticated.  Welcome " + User + "!", "Login Successful");
+                MessageBox.Show("Login Credentials Authenticated.  Welcome " + user + "!", "Login Successful");
+                User.setdat(access,user);
                 new TableChoose().Show();
                 Hide();
+                
             }
             else
             {
