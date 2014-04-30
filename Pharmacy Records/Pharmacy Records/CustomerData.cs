@@ -21,29 +21,48 @@ namespace Pharmacy_Records
             Cname.Text = User.person();
             ServCon custout;
             custout = new ServCon();
-            if(User.clrnce() == 3)
+            if(User.clrnce() < 10)
             {
                 string command = "select * from customer where cstusername = '" + User.person() + "'";
                 string[] results = custout.query(command);
                 int i = 0;
                 while (results[i] != null)
                 {
-                    custlist.Items.Add(results[i];
+                    custdat.Items.AddRange(results);
                     i++;
                 }
+            
             }
         }
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
 
-        private void button3_Click(object sender, EventArgs e)
+        }
+
+        private void Cquery_Click(object sender, EventArgs e)
+        {
+            ServCon custout;
+            custout = new ServCon();
+            string command;
+            if (cSale.Checked)
+                command = "select * from sale where cstID = '" + User.person() + "'";
+            else if (cScript.Checked)
+                command = "select * from perscription, sale, customer where perscription.saleid = sale.saleid and sale.cstID = customer.cstID and customer.cstusername = '" + User.person() + "'";
+
+        }
+
+        private void Cupdate_Click(object sender, EventArgs e)
         {
             new NewUser().Show();
             this.Close();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void CBack_Click(object sender, EventArgs e)
         {
             new TableChoose().Show();
             this.Close();
         }
+
+
     }
 }
