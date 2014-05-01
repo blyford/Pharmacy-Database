@@ -75,9 +75,11 @@ namespace Pharmacy_Records
             
             ServCon mngout;
             mngout = new ServCon();
+            string command = "";
+            
             if (Fullreport.Checked == true)
             {
-                string command = "select * from sale";
+                command = "select * from sale";
                 string[] results = mngout.query(command);
                 int i = 0;
                 while(results[i] != null)
@@ -88,11 +90,18 @@ namespace Pharmacy_Records
             }
             else if (YearSal.Checked == true)
             {
-                Dataoutput.Items.Add("Under Constuction!");
+                if (Qbox.Text == null)
+                    command = "select empusername, empsalary from employee";
+                else
+                    command = "select empusername, empsalary from employee where empusername = '" + Qbox.Text + "'";
+                string[] results = mngout.query(command);
+                Dataoutput.Items.AddRange(results);
             }
             else if (Names.Checked == true)
             {
-                Dataoutput.Items.Add("Under Constuction!");
+                command = "select username, empname from login, empoyee group by employee";
+                string[] results = mngout.query(command);
+                Dataoutput.Items.AddRange(results);
             }
             else
             {

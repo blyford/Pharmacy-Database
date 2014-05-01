@@ -33,10 +33,10 @@ namespace Pharmacy_Records
             mnginput = new ServCon();
             string userid = Username.Text;
             string pass = Password.Text;
-            string seclvl;
-            if (User.clrnce() == 3)
+            string seclvl = "1";
+            if (User.clrnce() == 1 && Aclvl.Text != null)
                 seclvl = Aclvl.Text;
-            else
+            else if(User.clrnce() == 3 || User.clrnce() == 2)
                 seclvl = "3";
             string SQLcommand = "insert into login values('" + userid + "','" + pass + "'," + seclvl + ");";
             mnginput.modify(SQLcommand);

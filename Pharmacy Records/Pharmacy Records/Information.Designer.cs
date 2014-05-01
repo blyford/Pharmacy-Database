@@ -44,6 +44,8 @@ namespace Pharmacy_Records
             this.Names = new System.Windows.Forms.RadioButton();
             this.YearSal = new System.Windows.Forms.RadioButton();
             this.Search = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Qbox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // logout
@@ -68,21 +70,21 @@ namespace Pharmacy_Records
             // 
             // mngID
             // 
-            this.mngID.Location = new System.Drawing.Point(59, 51);
+            this.mngID.Location = new System.Drawing.Point(57, 32);
             this.mngID.Name = "mngID";
             this.mngID.Size = new System.Drawing.Size(100, 20);
             this.mngID.TabIndex = 2;
             // 
             // fnamebox
             // 
-            this.fnamebox.Location = new System.Drawing.Point(59, 108);
+            this.fnamebox.Location = new System.Drawing.Point(57, 85);
             this.fnamebox.Name = "fnamebox";
             this.fnamebox.Size = new System.Drawing.Size(100, 20);
             this.fnamebox.TabIndex = 3;
             // 
             // lnamebox
             // 
-            this.lnamebox.Location = new System.Drawing.Point(59, 163);
+            this.lnamebox.Location = new System.Drawing.Point(57, 138);
             this.lnamebox.Name = "lnamebox";
             this.lnamebox.Size = new System.Drawing.Size(100, 20);
             this.lnamebox.TabIndex = 4;
@@ -92,11 +94,11 @@ namespace Pharmacy_Records
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label7.Location = new System.Drawing.Point(59, 32);
+            this.label7.Location = new System.Drawing.Point(54, 9);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(78, 16);
+            this.label7.Size = new System.Drawing.Size(86, 16);
             this.label7.TabIndex = 5;
-            this.label7.Text = "Manager ID";
+            this.label7.Text = "Employee ID";
             this.label7.Click += new System.EventHandler(this.label1_Click);
             // 
             // label8
@@ -104,7 +106,7 @@ namespace Pharmacy_Records
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label8.Location = new System.Drawing.Point(59, 89);
+            this.label8.Location = new System.Drawing.Point(54, 61);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(73, 16);
             this.label8.TabIndex = 6;
@@ -115,7 +117,7 @@ namespace Pharmacy_Records
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label9.Location = new System.Drawing.Point(59, 144);
+            this.label9.Location = new System.Drawing.Point(54, 113);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(73, 16);
             this.label9.TabIndex = 7;
@@ -200,12 +202,32 @@ namespace Pharmacy_Records
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(57, 165);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(84, 16);
+            this.label1.TabIndex = 16;
+            this.label1.Text = "Query Name";
+            // 
+            // Qbox
+            // 
+            this.Qbox.Location = new System.Drawing.Point(57, 191);
+            this.Qbox.Name = "Qbox";
+            this.Qbox.Size = new System.Drawing.Size(100, 20);
+            this.Qbox.TabIndex = 17;
+            // 
             // Information
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumBlue;
             this.ClientSize = new System.Drawing.Size(674, 319);
+            this.Controls.Add(this.Qbox);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.Search);
             this.Controls.Add(this.YearSal);
             this.Controls.Add(this.Names);
@@ -247,6 +269,8 @@ namespace Pharmacy_Records
         private System.Windows.Forms.RadioButton Names;
         private System.Windows.Forms.RadioButton YearSal;
         private System.Windows.Forms.Button Search;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox Qbox;
     }
 }
 
