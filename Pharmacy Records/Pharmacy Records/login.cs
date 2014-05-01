@@ -57,7 +57,12 @@ namespace Pharmacy_Records
                 AcceptButton = loginbtn;
             }
         }
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            base.OnFormClosing(e);
+        }
     
     }
+    
 }

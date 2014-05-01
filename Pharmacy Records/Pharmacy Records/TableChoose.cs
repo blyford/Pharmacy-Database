@@ -87,6 +87,11 @@ namespace Pharmacy_Records
             new login().Show();
             this.Close();
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            base.OnFormClosing(e);
+        }
 
     }
 }

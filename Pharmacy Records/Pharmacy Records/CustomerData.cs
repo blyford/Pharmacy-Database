@@ -72,6 +72,11 @@ namespace Pharmacy_Records
             this.Close();
         }
 
-
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            Environment.Exit(0);
+            base.OnFormClosing(e);
+        }
     }
+
 }

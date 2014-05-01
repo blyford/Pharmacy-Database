@@ -46,5 +46,10 @@ namespace Pharmacy_Records
             Aclvl.Text = "";
 
         }
+        protected override void OnFormClosing(FormClosingEventArgs e)
+        {
+            new login().Show();
+            base.OnFormClosing(e);
+        }
     }
 }
