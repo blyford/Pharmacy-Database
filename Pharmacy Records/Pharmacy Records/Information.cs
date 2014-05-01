@@ -93,15 +93,25 @@ namespace Pharmacy_Records
                 if (Qbox.Text == null)
                     command = "select empusername, empsalary from employee";
                 else
-                    command = "select empusername, empsalary from employee where empusername = '" + Qbox.Text + "'";
+                    command = "select empusername, empsalary from employee where empusername = '" + User.person() + "'";
                 string[] results = mngout.query(command);
-                Dataoutput.Items.AddRange(results);
+                int i = 0;
+                while (results[i] != null)
+                {
+                    Dataoutput.Items.Add(results[i]);
+                    i++;
+                }
             }
             else if (Names.Checked == true)
             {
-                command = "select username, empname from login, empoyee group by employee";
+                command = "select distinct empname from employee";
                 string[] results = mngout.query(command);
-                Dataoutput.Items.AddRange(results);
+                int i = 0;
+                while (results[i] != null)
+                {
+                    Dataoutput.Items.Add(results[i]);
+                    i++;
+                }
             }
             else
             {
@@ -113,11 +123,6 @@ namespace Pharmacy_Records
         {
 
         }
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
-            base.OnFormClosing(e);
-
-        }
+      
     }
 }

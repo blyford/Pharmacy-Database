@@ -20,19 +20,20 @@ namespace Pharmacy_Records
         {
             Cname.Text = User.person();
             ServCon custout;
+            int check = User.clrnce();
             custout = new ServCon();
-            if(User.clrnce() == 3)
-            {
+            //if(User.clrnce() == 3)
+            //{
                 string command = "select * from customer where cstusername = '" + User.person() + "'";
                 string[] results = custout.query(command);
                 int i = 0;
                 while (results[i] != null)
                 {
-                    custdat.Items.AddRange(results);
+                    custdat.Items.Add(results[i]);
                     i++;
                 }
             
-            }
+            //}
         }
         private void groupBox1_Enter(object sender, EventArgs e)
         {
@@ -45,17 +46,17 @@ namespace Pharmacy_Records
             custout = new ServCon();
             string command = "";
             if (cSale.Checked)
-                command = "select * from sale where cstID = '" + User.person() + "'";
+                command = "select * from sale, customer where sale.cstID = customer.cstID and cstusername = '" + User.person() + "'";
             else if (cScript.Checked)
                 command = "select * from perscription, sale, customer where perscription.saleid = sale.saleid and sale.cstID = customer.cstID and customer.cstusername = '" + User.person() + "'";
             else if (cDrug.Checked)
-                command = "select * from drug where drug.drugID = perscription.drugID and perscription.saleID = sale.saleID and sale.cstid = customer.cstid and customer.cstusername = '" + User.person() + "'";
+                command = "select * from drug, perscription, sale, customer where drug.drugID = perscription.drugID and perscription.saleID = sale.saleID and sale.cstid = customer.cstid and customer.cstusername = '" + User.person() + "'";
             string[] results = custout.query(command);
             int i = 0;
             while (results[i] != null)
             {
-                results[i] += '\n';
-                custdat.Items.AddRange(results);
+                //results[i] += '\n';
+                custdat.Items.Add(results[i]);
                 i++;
             }
         }
@@ -72,11 +73,6 @@ namespace Pharmacy_Records
             this.Close();
         }
 
-        protected override void OnFormClosing(FormClosingEventArgs e)
-        {
-            Environment.Exit(0);
-            base.OnFormClosing(e);
-        }
     }
 
 }
