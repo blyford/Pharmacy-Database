@@ -21,7 +21,7 @@ namespace Pharmacy_Records
             Cname.Text = User.person();
             ServCon custout;
             custout = new ServCon();
-            if(User.clrnce() < 10)
+            if(User.clrnce() == 3)
             {
                 string command = "select * from customer where cstusername = '" + User.person() + "'";
                 string[] results = custout.query(command);
@@ -43,12 +43,21 @@ namespace Pharmacy_Records
         {
             ServCon custout;
             custout = new ServCon();
-            string command;
+            string command = "";
             if (cSale.Checked)
                 command = "select * from sale where cstID = '" + User.person() + "'";
             else if (cScript.Checked)
                 command = "select * from perscription, sale, customer where perscription.saleid = sale.saleid and sale.cstID = customer.cstID and customer.cstusername = '" + User.person() + "'";
-
+            else if (cDrug.Checked)
+                command = "select * from drug where drug.drugID = perscription.drugID and perscription.saleID = sale.saleID and sale.cstid = customer.cstid and customer.cstusername = '" + User.person() + "'";
+            string[] results = custout.query(command);
+            int i = 0;
+            while (results[i] != null)
+            {
+                results[i] += '\n';
+                custdat.Items.AddRange(results);
+                i++;
+            }
         }
 
         private void Cupdate_Click(object sender, EventArgs e)
